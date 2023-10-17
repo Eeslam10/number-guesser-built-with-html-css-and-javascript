@@ -13,10 +13,10 @@ const generateTarget = () => {
 
 // generateGuessesFnx
 const compareGuesses = (humanGuess, computerGuess, secretNum) => {
-  const humanDifference = Math.abs(humanGuess - secretNum);
-  const computerDifference = Math.abs(compareGuesses - secretNum);
+  const humanDifference = Math.abs(secretNum - humanGuess);
+  const computerDifference = Math.abs(secretNum - computerGuess);
 
-  if(humanDifference <= compareGuesses){
+  if(humanDifference <= computerDifference){
     return true;
   }else {
     return false
